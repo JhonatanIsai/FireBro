@@ -30,35 +30,14 @@
         "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
       },
       {
-        "name": "About",
-        "short_name": "FireBro",
-        "description": "Keep up with the wildfires going on in the beautiful USA.",
-        "url": "/fireBro?source=pwa",
-        "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
-      },
-      {
         "name": "Contact",
         "short_name": "Contact",
         "description": "Contact page with valuable contact infromation.",
-        "url": "/pages/contact.html",
-        "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
-      },
-      {
-        "name": "About",
-        "short_name": "About",
-        "description": "Information about the purpose of the applications, along with useful tips and shortcuts.",
-        "url": "/pages/about.html",
-        "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
-      },
-      {
-        "name": "Settings",
-        "short_name": "Settings",
-        "description": "Setting.",
-        "url": "/pages/settings.html",
+        "url": "/pages/",
         "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
       }
     ],
-    "description": "Wild fire tracking application.",
+    "description": "Weather forecast information",
     "screenshots": [
       {
         "src": "/images/screenshot1.png",

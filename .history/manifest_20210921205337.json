@@ -54,11 +54,11 @@
         "name": "Settings",
         "short_name": "Settings",
         "description": "Setting.",
-        "url": "/pages/settings.html",
+        "url": "/pages/about.html",
         "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
       }
     ],
-    "description": "Wild fire tracking application.",
+    "description": "Weather forecast information",
     "screenshots": [
       {
         "src": "/images/screenshot1.png",

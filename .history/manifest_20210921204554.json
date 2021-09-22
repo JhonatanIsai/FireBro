@@ -1,0 +1,53 @@
+{
+    "short_name": "FireBro",
+    "name": "Fire Bro: Wild Fires",
+    "icons": [
+      {
+        "src": "/img/icon/icons8-fire.gif",
+        "type": "image/gif",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "/img/user.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": "index.html",
+    "background_color": "#000000",
+    "display_override": ["window-control-overlay", "minimal-ui"],
+    "display": "fullscreen",
+    "scope": ["/","/pages"],
+    "theme_color": "#de2128",
+    "shortcuts": [
+      {
+        "name": "FireBro",
+        "short_name": "Today",
+        "description": "View weather information for today",
+        "url": "/today?source=pwa",
+        "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+      },
+      {
+        "name": "How's weather tomorrow?",
+        "short_name": "Tomorrow",
+        "description": "View weather information for tomorrow",
+        "url": "/tomorrow?source=pwa",
+        "icons": [{ "src": "/images/tomorrow.png", "sizes": "192x192" }]
+      }
+    ],
+    "description": "Weather forecast information",
+    "screenshots": [
+      {
+        "src": "/images/screenshot1.png",
+        "type": "image/png",
+        "sizes": "540x720"
+      },
+      {
+        "src": "/images/screenshot2.jpg",
+        "type": "image/jpg",
+        "sizes": "540x720"
+      }
+    ]
+  }
