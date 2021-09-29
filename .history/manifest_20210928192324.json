@@ -9,23 +9,11 @@
   "background_color": "#000000",
   "theme_color":"#de2128",
   "dir":"auto",
-  "lang":"en-US",
+  "lang":"en_US"
 
   "icons": [
     {
       "src": "/img/icon/icons8-fire.gif",
-      "type": "image/gif",
-      "sizes": "192x192",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/img/icon/icons8-fire-48.png",
-      "type": "image/png",
-      "sizes": "48x48",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/img/icon/icons8-fire-96.png",
       "type": "image/gif",
       "sizes": "192x192",
       "purpose": "any maskable"

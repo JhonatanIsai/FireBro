@@ -20,12 +20,12 @@
     },
     {
       "src": "/img/icon/icons8-fire-48.png",
-      "type": "image/png",
-      "sizes": "48x48",
+      "type": "image/gif",
+      "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "/img/icon/icons8-fire-96.png",
+      "src": "/img/icon/icons8-fire",
       "type": "image/gif",
       "sizes": "192x192",
       "purpose": "any maskable"

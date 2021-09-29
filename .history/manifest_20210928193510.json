@@ -20,7 +20,7 @@
     },
     {
       "src": "/img/icon/icons8-fire-48.png",
-      "type": "image/png",
+      "type": "image/",
       "sizes": "48x48",
       "purpose": "any maskable"
     },
