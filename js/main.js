@@ -1,4 +1,7 @@
+import {processFireData} from "./make_request.js";
 
+
+processFireData();
 
 // Check if service workers are supprtes
 if ('serviceWorker' in navigator) {
@@ -9,3 +12,4 @@ if ('serviceWorker' in navigator) {
     })
 
 }
+
