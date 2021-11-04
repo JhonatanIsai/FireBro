@@ -56,13 +56,16 @@ self.addEventListener("fetch", function(event){
         return response || fetch(event.request);
     })
     );
-}); 
+});  
 
-//........................................................................................
+// ........................................................................................
+
+
+
 // const cacheName = "v1";
 // const cacheFireData = [];
 
-// self.addEventListener('install', event => {
+// self.addEventListener('install', event => { 
 //     console.log("Service Worker: Installed.");
     
 //     // Waiting until the asynchronus promise is done

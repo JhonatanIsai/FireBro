@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,24 +7,23 @@
     <title>FireBro</title>
     <link rel="shortcut icon" href="/img/icon/icons8-fire.gif">
     <link rel="stylesheet" href="/css/materialize.min.css">
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
     <script type="text/javascript" src="/js/materialize.min.js"></script>
-    <link rel="manifest" href="/manifest.json">
+    <link  rel= "manifest" href="/manifest.json">
 </head>
-
-<body>
+<body >
     <nav class="z-depth-0 red">
         <div class="nav-wrapper container">
             <a href="/">FireBro</a>
 
-            <i class="material-icons sidenav-trigger" data-target="left-menu">menu</i>
-            <i class="sidenav-trigger right" data-target="state-menu"><img
-                    src="https://img.icons8.com/ios/40/000000/california.png" /></i>
+                <i class="material-icons sidenav-trigger" data-target="left-menu">menu</i>
+                <i class="sidenav-trigger right" data-target="state-menu"><img src="https://img.icons8.com/ios/40/000000/california.png"/></i>
         </div>
     </nav>
-    <!--Left Menu-->
+<!--Left Menu-->
     <ul id="left-menu" class="sidenav left-menu">
         <li>
             <div class="user-view">
@@ -44,13 +42,12 @@
         <li>
             <div class="divider"></div>
         </li>
-
-        <li><a class="waves-effect" href="/pages/settings.html"><i class="material-icons">settings</i>Settings</a></li>
+        
+            <li><a class="waves-effect" href="/pages/settings.html"><i class="material-icons">settings</i>Settings</a></li>
 
         </li>
     </ul>
-
-    <!--States Menu-->
+<!--States Menu-->
     <ul id="state-menu" class="sidenav state-menu">
         <li>
             <div class="user-view">
@@ -63,31 +60,32 @@
                 <p><span class="white-text "> A-Z</span></p>
             </div>
         </li>
-        <li>
-            <p>Alabama</p>
-        </li>
-        <li>
-            <p>Alaska</p>
-        </li>
-        <li>
-            <p>Arizona</p>
-        </li>
-        <li>
-            <p>Arkansas</p>
-        </li>
-        <li>
-            <p>California</p>
-        </li>
+        <li><p>Alabama</p></li>
+        <li><p>Alaska</p></li>
+        <li><p>Arizona</p></li>
+        <li><p>Arkansas</p></li>
+        <li><p>California</p></li>
     </ul>
 
-    <!--Main-->
-    <div class="background">
-       
+<!--Main-->
+    <div >
+        <div class="row">
+            <h2>Home</h2>
+            <div id="map">
+                <h2>Map</h2> 
+            </div>
+
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkTqESoF8KFRHmiS4y3HBjKJKSiO_53l0&callback=initMap">
+</script>
+          
     </div>
 
 
-    <script type="module" src="/js/main.js"></script>
-    <script type="text/javascript" src="/js/menus.js"></script>
-</body>
+<script type="module" src="/js/main.js"></script>
+<script type="module" src="js/menus.js"></script>
+<!-- <script type="text/javascript" src="/js/map.js"></script> -->
 
+
+</body>
 </html>
