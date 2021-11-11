@@ -30,8 +30,8 @@
       "purpose": "any maskable"
     },
     {
-      "src": "/img/user.png",
-      "type": "image/png",
+      "src": "/img/user.jpg",
+      "type": "image/jpg",
       "sizes": "192x192",
       "purpose": "any maskable"
     }
@@ -48,7 +48,7 @@
       "url": "/fireBro?source=pwa",
       "icons": [
         {
-          "src": "/images/today.png",
+          "src": "/img/icon/icons8-fire-96.png",
           "sizes": "192x192"
         }
       ]
@@ -60,7 +60,7 @@
       "url": "/fireBro?source=pwa",
       "icons": [
         {
-          "src": "/images/today.png",
+          "src": "/img/icon/icons8-fire-96.png",
           "sizes": "192x192"
         }
       ]
@@ -72,7 +72,7 @@
       "url": "/pages/contact.html",
       "icons": [
         {
-          "src": "/images/tomorrow.png",
+          "src": "/img/icon/icons8-fire-96.png",
           "sizes": "192x192"
         }
       ]
@@ -84,7 +84,7 @@
       "url": "/pages/about.html",
       "icons": [
         {
-          "src": "/images/tomorrow.png",
+          "src": "/img/icon/icons8-fire-96.png",
           "sizes": "192x192"
         }
       ]
@@ -96,7 +96,7 @@
       "url": "/pages/settings.html",
       "icons": [
         {
-          "src": "/images/tomorrow.png",
+          "src": "/img/icon/icons8-fire-96.png",
           "sizes": "192x192"
         }
       ]
@@ -104,12 +104,12 @@
   ],
   "screenshots": [
     {
-      "src": "/img/screenshot1.png",
-      "type": "image/png",
+      "src": "/img/screenshot1.jpg",
+      "type": "image/jpg",
       "sizes": "540x720"
     },
     {
-      "src": "/img/screenshot2.png",
+      "src": "/img/screenshot2.jpg",
       "type": "image/jpg",
       "sizes": "540x720"
     }
