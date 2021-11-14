@@ -15,8 +15,7 @@ let assets = [
 
 
     // JavaScript
-    "/js/main.js",
-    "/js/menus.js",
+
     "/js/materialize.min.js",
 
     "/css/materialize.min.css",
@@ -85,24 +84,6 @@ self.addEventListener("fetch", event => {
                     cache.put(event.request.url, newRequest.clone());
                     return (newRequest);
                 })
-
-
-
-                // if (event.request.url.indexOf("js/main.js") <= -1) {
-                //     // if (event.request.url.indexOf("js/menus.js") <= -1 ){
-
-                //         console.log("main", event.request.url.indexOf("js/main.js"));
-                //         console.log("menu", event.request.url.indexOf("js/menus.js"));
-                //         console.log("found bad URL", event.request.url);
-                //         return caches.open(dynamic_cache_name).then(cache => {
-                //             cache.put(event.request.url, newRequest.clone());
-                //             return (newRequest);
-                //         })
-
-                //     // }
-
-                // }
-
             }
             )
         }).catch(() => {

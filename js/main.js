@@ -12,5 +12,5 @@ if ('serviceWorker' in navigator) {
     })
 }
 
-  let fire = returnFireData();
-initMap(fire);
+//   let fire = returnFireData();
+// initMap(fire);

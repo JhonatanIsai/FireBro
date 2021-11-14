@@ -38,7 +38,7 @@
             </div>
         </li>
         <li><a class="waves-effect" href="/"><i class="material-icons">home</i>Home</a></li>
-        <li><a class="waves-effect"><i class="material-icons">nature</i>States</a></li>      
+        <li><a class="waves-effect"><i class="material-icons">nature</i>States</a></li>
         <li><a href="/pages/contact.html" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
         <li><a class="waves-effect" href="/pages/about.html"><i class="material-icons">weekend</i>About</a></li>
         <li>
@@ -64,46 +64,68 @@
         </li>
         <!-- For Fore options -->
 
-        <!-- <li><p>Alabama</p></li>
-        <li><p>Alaska</p></li>
-        <li><p>Arizona</p></li>
-        <li><p>Arkansas</p></li>
-        <li><p>California</p></li> -->
     </ul>
 
     <!--Main-->
     <div>
         <div>
             <form>
-                <form>
-                    <label for="yearOfFire">Year:</label>
-                    <input type="numbe" name="yearOfFire">
-
-                </form>
 
             </form>
         </div>
+        <!-- Holds weather data
+        1.Current location name
+        2. Temperature
+        3. Weather (clear, suuny, cloudy, etc.)
+        4. Weather Icon
+    -->
         <div class="row">
-            <h2>Home</h2>
-        
-        
-            <!-- Div for Map -->
-            <div id="map">
-                <h2>Map</h2>
+            <div class="col s12 m7">
+
+                <div class="card horizontal blue-grey darken-2">
+
+                    <div class="card-stacked">
+                        <div class="card-content white-text bold">
+                            <h4 id="cityName"></h4>
+                            <p id="weather"></p>
+                            <p id="temperature"></p>
+                        </div>
+                        <div class="card-action">
+                            <!-- can add a div for othe stuff later -->
+                
+                        </div>
+                    </div>
+
+                    <div class="card-image">
+                        <img id = "weatherIcon" >
+                    </div>
+                </div>
             </div>
-        
-            <script async
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkTqESoF8KFRHmiS4y3HBjKJKSiO_53l0&callback=initMap">
-            </script>
-        
+
         </div>
-        
-        <!-- <script src="/js/fireOptions.js"></script> -->
-        
-        <script type="module" src="/js/main.js"></script>
-        <script type="module" src="/js/menus.js"></script>
-        <!-- <script type="text/javascript" src="/js/map.js"></script> -->
-        
-        </body>
-        
-        </html>
+
+
+
+
+        <!-- Div for Map -->
+        <div id="map">
+            <h2>Map</h2>
+        </div>
+
+        <!-- <script async
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkTqESoF8KFRHmiS4y3HBjKJKSiO_53l0&callback=initMap">
+            </script> -->
+
+    </div>
+
+    <!-- <script src="/js/fireOptions.js"></script> -->
+
+
+    <!-- <script type="text/javascript" src="/js/map.js"></script> -->
+
+</body>
+<script type="module" src="/js/main.js"></script>
+<script type="module" src="/js/menus.js"></script>
+<script type="module" src="/js/localWeather.js" async></script>
+
+</html>
