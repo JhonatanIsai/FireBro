@@ -70,7 +70,7 @@ const update = async (priority, id) => {
     await updateDoc(userDoc, newFields);
 }
 
-const deleteUser = async () => (id){
+const deleteUser = async (id) => {
     const userDoc =doc(db, "users", id);
     await deleteDoc(userDoc);
 
