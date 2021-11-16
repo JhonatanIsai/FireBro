@@ -50,7 +50,7 @@
         </li>
     </ul>
     <!--States Menu-->
-    <ul id="state-menu" class="sidenav state-menu">
+    <ul id="state-menu" class="sidenav state-menu blue-grey darken-2 white-text">
         <li>
             <div class="user-view">
                 <div class="background">
@@ -63,13 +63,21 @@
             </div>
         </li>
         <!-- For Fore options -->
-        <form>
-            <label for="fireToWatch">Fire To Watch</label>
-            <input id="fireToWatch" type="text">
 
-            <input type="button" value="Add To List">
+        <form id="rightMenuForm">
+            <label for="fireToWatch">Fire To Watch</label>
+            <input id="fireToWatchName" name="fireToWatchName" type="text">
+            <input id="fireToWatchID" name="fireToWatchID">
+
+            <!-- <input id="submitFireButton" type="button" value="Add To List"> -->
 
         </form>
+
+        <button id="submitFireButton" type="button" >Submit</button>
+
+        <div id="fireToWatchResults" >
+
+        </div>
 
         
 

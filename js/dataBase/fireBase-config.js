@@ -34,46 +34,10 @@ measurementId: "G-ZZT21BE6DE"
 
 };
 
+
 const app = initializeApp(firebaseConfig);
 
 // export const db = getFirestore(app);
-const db = getFirestore(app);
+export const db = getFirestore(app);
 //..............................................................................
-const userCollectionRef = collection(db, "users");
-
-
-
-//..........................................................
-const getUsers = async () =>{
-var name ;
-const data = await getDocs(userCollectionRef);
-const secondData = data.docs.map((doc) => {
-    name = doc.data().name});
-// console.log(name)
-return name;
-}
-getUsers().then(data => 0)
-
-
-//........................................................
-
-    const addNewUser = async () =>{
-        await addDoc(userCollectionRef, {name:"kevin", age:"22"})
-        console.log("adding user");
-    }
-
-//........................................................................
-
-const update = async (priority, id) => {
-    const userDoc =doc(db, "users", id);
-    const newPriority = {priority:1}
-    await updateDoc(userDoc, newFields);
-}
-
-const deleteUser = async (id) => {
-    const userDoc =doc(db, "users", id);
-    await deleteDoc(userDoc);
-
-}
-
-
+export  const fireCollectionRef = collection(db, "FiresDB");
