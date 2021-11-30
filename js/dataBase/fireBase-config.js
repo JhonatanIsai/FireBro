@@ -1,13 +1,12 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
 import { getFirestore, doc, getDoc, getDocs, collection,addDoc,deleteDoc} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
-// import { functionsIn } from "lodash";
-// Import the functions you need from the SDKs you need
 
-
-
-
-
-// TODO: Add SDKs for Firebase products that you want to use
+/** Fire Base credentials for connection
+ *  This are the4 FireBase credentials to succesfully connect
+ * Exporting App to use for other FireBase services
+ * Exporting db to connect with firestore
+ * Exporting the Database that we actually want from FireStore
+ */
 
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -16,6 +15,7 @@ import { getFirestore, doc, getDoc, getDocs, collection,addDoc,deleteDoc} from "
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
+// Credentials needed to connect, dont make any changes
 const firebaseConfig = {
 
 apiKey: "AIzaSyDbwrVecvJW8oa-u8puA6xiRcxQhgEZ5Fg",
@@ -34,10 +34,11 @@ measurementId: "G-ZZT21BE6DE"
 
 };
 
+// For use with outher firebase services
+export const app = initializeApp(firebaseConfig);
 
-const app = initializeApp(firebaseConfig);
-
-// export const db = getFirestore(app);
+// To connect to firestore
 export const db = getFirestore(app);
 //..............................................................................
+// To choose the correct db base from the firestore
 export  const fireCollectionRef = collection(db, "FiresDB");

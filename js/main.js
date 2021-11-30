@@ -1,6 +1,6 @@
 
-import returnFireData from "./make_request.js"
-import {initMap } from "./map.js"
+// import returnFireData from "./make_request.js"
+// import {initMap } from "./map.js"
 
 
 // Check if service workers are supprtes

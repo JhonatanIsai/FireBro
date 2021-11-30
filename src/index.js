@@ -1,8 +1,26 @@
 
 
-import { getFirestore, doc, getDoc, getDocs, collection, addDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+import {enableIndexedDbPersistence,  getFirestore, doc, getDoc, getDocs, collection, addDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 // import { ConcatenationScope } from "webpack";
 import { db, fireCollectionRef } from "../js/dataBase/fireBase-config.js";
+// import { } from "firebase/firestore";
+
+
+
+enableIndexedDbPersistence(db)
+    .catch((err) => {
+        if (err.code == 'failed-precondition') {
+            // Multiple tabs open, persistence can only be enabled
+            // in one tab at a a time.
+            
+            console.log("Persistance Failed.");
+        } else if (err.code == 'unimplemented') {
+            // The current browser does not support all of the
+            // features required to enable persistence
+            // ...
+            console.log("Persistance is not valid.");
+        }
+    });
 
 
 
@@ -12,7 +30,7 @@ const getFires = async () => {
 
     const data = await getDocs(fireCollectionRef);
     const secondData = data.docs.map((doc) => {
-        // console.log(doc.id)
+        console.log(doc.id)
         dataArray.push([doc.data().Name, doc.data().ID, doc.id])
 
     })
@@ -45,7 +63,6 @@ function addNewFire() {
             console.log("adding user");
         }
         addNewUser(name, ID);
-
     }
     else {
         //If the fields are empty we add a toast and display message to terminal.
@@ -75,13 +92,13 @@ function displayFireList(fireNameFromBD) {
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = "Delete";
     deleteButton.id = "fireTest";
-  deleteButton.classList.add("waves-effect", "waves-light", "btn-small", "red");
+    deleteButton.classList.add("waves-effect", "waves-light", "btn-small", "red");
 
-deleteButton.onclick = () => {
+    deleteButton.onclick = () => {
         deleteUser(fireNameFromBD[2])
     }
 
-   
+
 
 
 
@@ -111,9 +128,9 @@ deleteButton.onclick = () => {
 
 
 
-// const update = async (priority, id) => {
-//     const userDoc =doc(db, "users", id);
-//     const newPriority = {priority:1}
-//     await updateDoc(userDoc, newFields);
-// }
+    // const update = async (priority, id) => {
+    //     const userDoc =doc(db, "users", id);
+    //     const newPriority = {priority:1}
+    //     await updateDoc(userDoc, newFields);
+    // }
 }

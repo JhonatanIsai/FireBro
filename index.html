@@ -25,6 +25,7 @@
             <i class="material-icons sidenav-trigger right" data-target="state-menu">menu</i>
         </div>
     </nav>
+
     <!--Left Menu-->
     <ul id="left-menu" class="sidenav left-menu">
         <li>
@@ -37,18 +38,80 @@
                 <a><span class="white-text email"> email@email.com</span></a>
             </div>
         </li>
+
+        <li class="logged_in">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-account">My Info</a>
+        </li>
+        <li class="logged_ouy">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-login">Log-In</a>
+        </li>
+        <li class="logged_in">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-signup">Sign-Up</a>
+        </li>
+
         <li><a class="waves-effect" href="/"><i class="material-icons">home</i>Home</a></li>
         <li><a class="waves-effect"><i class="material-icons">nature</i>States</a></li>
         <li><a href="/pages/contact.html" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
         <li><a class="waves-effect" href="/pages/about.html"><i class="material-icons">weekend</i>About</a></li>
-        <li>
-            <div class="divider"></div>
-        </li>
+        <li><div class="divider"></div></li>
 
         <li><a class="waves-effect" href="/pages/settings.html"><i class="material-icons">settings</i>Settings</a></li>
 
-        </li>
+        <!-- </li> -->
+
+
+
     </ul>
+
+
+    <!-- Sign Up -->
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <h4>Sign Up</h4>
+            <form id="signup-form">
+                <div class="input-field">
+                    <input type="email" id="signup-email" required>
+                    <label for="signup-email">Email Address</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" id="signup-password" required>
+                    <label for="signup-password">Password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Sign UP</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- Login -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Login</h4><br>
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Email Adress</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required>
+                    <label for="login-password"> Your password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Loin</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Account -->
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account Details</h4>
+            <div class="account-details"></div>
+            <div> 
+                <button id="logout-button" class="btn red darken-2 z-depth-0">Sign-Out</button>
+            </div>
+        </div>
+    </div>
+
     <!--States Menu-->
     <ul id="state-menu" class="sidenav state-menu blue-grey darken-2 white-text">
         <li>
@@ -73,63 +136,63 @@
 
         </form>
 
-        <button id="submitFireButton" type="button" >Submit</button>
+        <button id="submitFireButton" type="button">Submit</button>
 
-        <div id="fireToWatchResults" >
+        <div id="fireToWatchResults">
 
         </div>
 
-        
+
 
     </ul>
 
     <!--Main-->
-    <div>
-        <div>
-            <form>
 
-            </form>
-        </div>
-        <!-- Holds weather data
+    <div>
+    
+
+
+    </div>
+    <!-- Holds weather data
         1.Current location name
         2. Temperature
         3. Weather (clear, suuny, cloudy, etc.)
         4. Weather Icon
     -->
-        <div class="row">
-            <div class="col s12 m7">
+    <div class="row">
+        <div class="col s12 m7">
 
-                <div class="card horizontal blue-grey darken-2">
+            <div class="card horizontal blue-grey darken-2">
 
-                    <div class="card-stacked">
-                        <div class="card-content white-text bold">
-                            <h4 id="cityName"></h4>
-                            <p id="weather"></p>
-                            <p id="temperature"></p>
-                        </div>
-                        <div class="card-action">
-                            <!-- can add a div for othe stuff later -->
-                
-                        </div>
+                <div class="card-stacked">
+                    <div class="card-content white-text bold">
+                        <h4 id="cityName"></h4>
+                        <p id="weather"></p>
+                        <p id="temperature"></p>
                     </div>
+                    <div class="card-action">
+                        <!-- can add a div for othe stuff later -->
 
-                    <div class="card-image">
-                        <img id = "weatherIcon" >
                     </div>
                 </div>
+
+                <div class="card-image">
+                    <img id="weatherIcon">
+                </div>
             </div>
-
         </div>
 
+    </div>
 
 
 
-        <!-- Div for Map -->
-        <div id="map">
-            <h2>Map</h2>
-        </div>
 
-        <!-- <script async
+    <!-- Div for Map -->
+    <div id="map">
+        <h2>Map</h2>
+    </div>
+
+    <!-- <script async
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkTqESoF8KFRHmiS4y3HBjKJKSiO_53l0&callback=initMap">
             </script> -->
 
@@ -145,5 +208,6 @@
 <script type="module" src="/js/menus.js"></script>
 <script type="module" src="/js/localWeather.js" async></script>
 <script type="module" src="/src/index.js"></script>
+<script type="module" src="/js/authentication/auth.js"></script>
 
 </html>
