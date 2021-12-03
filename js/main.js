@@ -1,7 +1,4 @@
-
-// import returnFireData from "./make_request.js"
-// import {initMap } from "./map.js"
-
+import {initMap } from "./map.js"
 
 // Check if service workers are supprtes
 if ('serviceWorker' in navigator) {
@@ -10,7 +7,8 @@ if ('serviceWorker' in navigator) {
             .then(registration => console.log("Seriviceworker registrations succefull with scope: ", registration.scope))
             .catch(err => console.log(`Serviceworker: Error: ${err}`))
     })
-}
+};
 
-//   let fire = returnFireData();
-// initMap(fire);
+
+initMap();
+

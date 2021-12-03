@@ -30,7 +30,7 @@ const getFires = async () => {
 
     const data = await getDocs(fireCollectionRef);
     const secondData = data.docs.map((doc) => {
-        console.log(doc.id)
+    
         dataArray.push([doc.data().Name, doc.data().ID, doc.id])
 
     })
@@ -53,8 +53,12 @@ const deleteUser = async (id) => {
 
 function addNewFire() {
     const inputForm = document.getElementById("rightMenuForm").elements;
+
     const name = inputForm.item(0).value;
     const ID = inputForm.item(1).value;
+
+    // const name = dataArray[0];
+    // const ID = dataArray[0] | "nn";
 
     if (Boolean(ID) && Boolean(name)) {
 
@@ -72,12 +76,52 @@ function addNewFire() {
             html: 'Name and ID fields are empty',
             classes: "rounded"
         });
-
-
     }
-
-
 }
+
+export function addNewFire2(name, id) {
+    const inputForm = document.getElementById("rightMenuForm").elements;
+
+    const name = name;
+    const ID = id;
+
+    // const name = dataArray[0];
+    // const ID = dataArray[0] | "nn";
+
+    if (Boolean(ID) && Boolean(name)) {
+
+        const addNewUser = async (name, ID) => {
+            await addDoc(fireCollectionRef, { Name: name, ID: ID })
+            console.log("adding user");
+        }
+        addNewUser(name, ID);
+    }
+    else {
+        //If the fields are empty we add a toast and display message to terminal.
+        console.log("Empty fields on right menu.");
+
+        M.toast({
+            html: 'Name and ID fields are empty',
+            classes: "rounded"
+        });
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.getElementById("submitFireButton").addEventListener("click", addNewFire, false);
 

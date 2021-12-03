@@ -53,7 +53,9 @@
         <li><a class="waves-effect"><i class="material-icons">nature</i>States</a></li>
         <li><a href="/pages/contact.html" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
         <li><a class="waves-effect" href="/pages/about.html"><i class="material-icons">weekend</i>About</a></li>
-        <li><div class="divider"></div></li>
+        <li>
+            <div class="divider"></div>
+        </li>
 
         <li><a class="waves-effect" href="/pages/settings.html"><i class="material-icons">settings</i>Settings</a></li>
 
@@ -106,7 +108,7 @@
         <div class="modal-content center-align">
             <h4>Account Details</h4>
             <div class="account-details"></div>
-            <div> 
+            <div>
                 <button id="logout-button" class="btn red darken-2 z-depth-0">Sign-Out</button>
             </div>
         </div>
@@ -149,7 +151,7 @@
     <!--Main-->
 
     <div>
-    
+
 
 
     </div>
@@ -192,11 +194,11 @@
         <h2>Map</h2>
     </div>
 
-    <!-- <script async
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkTqESoF8KFRHmiS4y3HBjKJKSiO_53l0&callback=initMap">
-            </script> -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkTqESoF8KFRHmiS4y3HBjKJKSiO_53l0&callback=initMap">
+        </script>
 
-    </div>
+
 
     <!-- <script src="/js/fireOptions.js"></script> -->
 
@@ -209,5 +211,22 @@
 <script type="module" src="/js/localWeather.js" async></script>
 <script type="module" src="/src/index.js"></script>
 <script type="module" src="/js/authentication/auth.js"></script>
+
+<script>
+
+    import addNewFire2 from "/src/index.js";
+    function test3(id) {
+
+        const name = id.name;
+        const idNew = id.id;
+        var button = document.getElementById(id.id);
+
+        console.log(id);
+        console.log(idNew);
+
+        addNewFire2(name, idNew);
+
+    }
+</script>
 
 </html>

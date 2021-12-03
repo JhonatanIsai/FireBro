@@ -19,11 +19,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-  const setupTasks = (data) =>{
-    let html ="";
 
-    data.forEach((doc) => {
-      const task = doc.data();
-      const li
-    })
-  }
