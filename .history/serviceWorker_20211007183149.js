@@ -1,3 +1,0 @@
-/*Installing the service worker*/
-
-

@@ -29,7 +29,7 @@ function addDataToDOM(data) {
     var currentWeatherIcon = document.getElementById("weatherIcon");
 
     //Changing the data inside the elements
-    currentTemperature.innerText = data.main.temp;
+    currentTemperature.innerText = data.main.temp + " F";
     currentCityName.innerText = data.name;
     currentWeather.innerText = data.weather[0].main;
 
@@ -69,7 +69,7 @@ function showLocation(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     const key = 'f5a76bcde0f4fed7682b28cd60f2f9b1';
-    var weatherURL = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + key + '';
+    var weatherURL = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=' + key + '&units=imperial';
 
     fetch(weatherURL) // converting request to JSON
         .then(response => response.json())

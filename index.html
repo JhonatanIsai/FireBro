@@ -34,13 +34,13 @@
                     <img src="/img/forest.jpg" class="responsive-img">
                 </div>
                 <a><img class="circle" src="/img/user.jpg"></a>
-                <a><span class="white-text name"> Jhonatan</span></a>
-                <a><span class="white-text email"> email@email.com</span></a>
+                <a><span class="white-text name"> User</span></a>
+                <a><p id="userEmail"class="white-text email"> email@email.com</p></a>
             </div>
         </li>
 
         <li class="logged_in">
-            <a href="#" class="waves-effect modal-trigger" data-target="modal-account">My Info</a>
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-account">Log-Out</a>
         </li>
         <li class="logged_ouy">
             <a href="#" class="waves-effect modal-trigger" data-target="modal-login">Log-In</a>
@@ -50,7 +50,7 @@
         </li>
 
         <li><a class="waves-effect" href="/"><i class="material-icons">home</i>Home</a></li>
-        <li><a class="waves-effect"><i class="material-icons">nature</i>States</a></li>
+        
         <li><a href="/pages/contact.html" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
         <li><a class="waves-effect" href="/pages/about.html"><i class="material-icons">weekend</i>About</a></li>
         <li>
@@ -122,16 +122,14 @@
                     <img class="responsive-img" src="/img/bear.jpg">
                 </div>
                 <a><img class="circle right" src="/img/flag.jpg"></a>
-                <h5><span class="white-text">State Menu</span></h5>
-                <p><span class="white-text">Fires by state</span></p>
-                <p><span class="white-text "> A-Z</span></p>
+                <h5><span class="white-text">Fires</span></h5>
             </div>
         </li>
         <!-- For Fore options -->
 
         <form id="rightMenuForm">
-            <label for="fireToWatch">Fire To Watch</label>
-            <input id="fireToWatchName" name="fireToWatchName" type="text">
+            <label for="fireToWatch" class="white-text">Fire To Watch</label>
+            <input id="fireToWatchName" class="white-text large" name="fireToWatchName" type="text">
             <input id="fireToWatchID" name="fireToWatchID">
 
             <!-- <input id="submitFireButton" type="button" value="Add To List"> -->
@@ -147,7 +145,6 @@
 
 
     </ul>
-
     <!--Main-->
 
     <div>
@@ -168,7 +165,7 @@
 
                 <div class="card-stacked">
                     <div class="card-content white-text bold">
-                        <h4 id="cityName"></h4>
+                        <h4 id="cityName">Connect to Internet to load</h4>
                         <p id="weather"></p>
                         <p id="temperature"></p>
                     </div>
@@ -192,6 +189,7 @@
     <!-- Div for Map -->
     <div id="map">
         <h2>Map</h2>
+        <p>Please connect to internet to see Map</p>
     </div>
 
     <script async
@@ -213,20 +211,17 @@
 <script type="module" src="/js/authentication/auth.js"></script>
 
 <script>
-
-    import addNewFire2 from "/src/index.js";
-    function test3(id) {
-
-        const name = id.name;
-        const idNew = id.id;
-        var button = document.getElementById(id.id);
-
+    function test3(ID){
+        let name = ID.name;
+        let id = ID.id;
+        console.log(name);
         console.log(id);
-        console.log(idNew);
+        let myName = document.getElementById("fireToWatchName").value=(name);
+        let myID = document.getElementById("fireToWatchID").value=(id);
 
-        addNewFire2(name, idNew);
-
-    }
+        
+    };
 </script>
+
 
 </html>

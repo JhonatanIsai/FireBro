@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,25 @@
     <title>FireBro</title>
     <link rel="shortcut icon" href="/img/icon/icons8-fire-48.png">
     <link rel="stylesheet" href="/css/materialize.min.css">
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
     <script type="text/javascript" src="/js/materialize.min.js"></script>
-    <link  rel= "manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.json">
 </head>
-<body >
+
+<body>
     <nav class="z-depth-0 red">
         <div class="nav-wrapper container">
             <a href="/">FireBro</a>
 
-                <i class="material-icons sidenav-trigger" data-target="left-menu">menu</i>
-                <i class="material-icons sidenav-trigger right" data-target="state-menu">menu</i>
+            <i class="material-icons sidenav-trigger" data-target="left-menu">menu</i>
+            <i class="material-icons sidenav-trigger right" data-target="state-menu">menu</i>
         </div>
     </nav>
-<!--Left Menu-->
+
+    <!--Left Menu-->
     <ul id="left-menu" class="sidenav left-menu">
         <li>
             <div class="user-view">
@@ -30,40 +34,116 @@
                     <img src="/img/forest.jpg" class="responsive-img">
                 </div>
                 <a><img class="circle" src="/img/user.jpg"></a>
-                <a><span class="white-text name"> Jhonatan</span></a>
-                <a><span class="white-text email"> email@email.com</span></a>
+                <a><span class="white-text name"> User</span></a>
+                <a><p id="userEmail"class="white-text email"> email@email.com</p></a>
             </div>
         </li>
+
+        <li class="logged_in">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-account">Log-Out</a>
+        </li>
+        <li class="logged_ouy">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-login">Log-In</a>
+        </li>
+        <li class="logged_in">
+            <a href="#" class="waves-effect modal-trigger" data-target="modal-signup">Sign-Up</a>
+        </li>
+
         <li><a class="waves-effect" href="/"><i class="material-icons">home</i>Home</a></li>
-        <li><a class="waves-effect"><i class="material-icons">nature</i>States</a></li>
+        
         <li><a href="/pages/contact.html" class="waves-effect"><i class="material-icons">mail_outline</i>Contact</a>
         <li><a class="waves-effect" href="/pages/about.html"><i class="material-icons">weekend</i>About</a></li>
         <li>
             <div class="divider"></div>
         </li>
-        
-            <li><a class="waves-effect" href="/pages/settings.html"><i class="material-icons">settings</i>Settings</a></li>
 
-        </li>
+        <li><a class="waves-effect" href="/pages/settings.html"><i class="material-icons">settings</i>Settings</a></li>
+
+        <!-- </li> -->
+
+
+
     </ul>
-<!--States Menu-->
-    <ul id="state-menu" class="sidenav state-menu">
+
+
+    <!-- Sign Up -->
+    <div id="modal-signup" class="modal">
+        <div class="modal-content">
+            <h4>Sign Up</h4>
+            <form id="signup-form">
+                <div class="input-field">
+                    <input type="email" id="signup-email" required>
+                    <label for="signup-email">Email Address</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="password" id="signup-password" required>
+                    <label for="signup-password">Password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Sign UP</button>
+            </form>
+        </div>
+
+    </div>
+    <!-- Login -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <h4>Login</h4><br>
+            <form id="login-form">
+                <div class="input-field">
+                    <input type="email" id="login-email" required />
+                    <label for="login-email">Email Adress</label>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="login-password" required>
+                    <label for="login-password"> Your password</label>
+                </div>
+                <button class="btn yellow darken-2 z-depth-0">Loin</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Account -->
+    <div id="modal-account" class="modal">
+        <div class="modal-content center-align">
+            <h4>Account Details</h4>
+            <div class="account-details"></div>
+            <div>
+                <button id="logout-button" class="btn red darken-2 z-depth-0">Sign-Out</button>
+            </div>
+        </div>
+    </div>
+
+    <!--States Menu-->
+    <ul id="state-menu" class="sidenav state-menu blue-grey darken-2 white-text">
         <li>
             <div class="user-view">
                 <div class="background">
                     <img class="responsive-img" src="/img/bear.jpg">
                 </div>
                 <a><img class="circle right" src="/img/flag.jpg"></a>
-                <h5><span class="white-text">State Menu</span></h5>
-                <p><span class="white-text">Fires by state</span></p>
-                <p><span class="white-text "> A-Z</span></p>
+                <h5><span class="white-text">Fires</span></h5>
             </div>
         </li>
-        <li><p>Alabama</p></li>
-        <li><p>Alaska</p></li>
-        <li><p>Arizona</p></li>
-        <li><p>Arkansas</p></li>
-        <li><p>California</p></li>
+        <!-- For Fore options -->
+
+        <form id="rightMenuForm">
+            <label for="fireToWatch" class="white-text">Fire To Watch</label>
+            <input id="fireToWatchName" class="white-text large" name="fireToWatchName" type="text">
+            <input id="fireToWatchID" name="fireToWatchID">
+
+            <!-- <input id="submitFireButton" type="button" value="Add To List"> -->
+
+        </form>
+
+        <button id="submitFireButton" type="button">Submit</button>
+
+        <div id="fireToWatchResults">
+
+        </div>
+
+
+
     </ul>
 
 <!--Main-->
@@ -90,6 +170,8 @@
 
 
 <script type="text/javascript" src="/js/menus.js"></script>
+<script type="module" src="/src/index.js"></script>
+<script type="module" src="/js/authentication/auth.js"></script>
 
 </body>
 </html>

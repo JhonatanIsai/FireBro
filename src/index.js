@@ -79,35 +79,6 @@ function addNewFire() {
     }
 }
 
-export function addNewFire2(name, id) {
-    const inputForm = document.getElementById("rightMenuForm").elements;
-
-    const name = name;
-    const ID = id;
-
-    // const name = dataArray[0];
-    // const ID = dataArray[0] | "nn";
-
-    if (Boolean(ID) && Boolean(name)) {
-
-        const addNewUser = async (name, ID) => {
-            await addDoc(fireCollectionRef, { Name: name, ID: ID })
-            console.log("adding user");
-        }
-        addNewUser(name, ID);
-    }
-    else {
-        //If the fields are empty we add a toast and display message to terminal.
-        console.log("Empty fields on right menu.");
-
-        M.toast({
-            html: 'Name and ID fields are empty',
-            classes: "rounded"
-        });
-    }
-}
-
-
 
 
 

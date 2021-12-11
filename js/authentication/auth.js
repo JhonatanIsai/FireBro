@@ -29,7 +29,8 @@ signupForms.addEventListener("submit", (event) => {
     // Creating the new user with FireBase
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredentials) => {
-            console.log("Login user: ", userCredentials.user, "...");
+            const email = userCredentials.user.email;
+            document.getElementById("userEmail").innerHTML = email;
             const modal = document.getElementById("modal-signup");
             M.Modal.getInstance(modal).close();
             signupForms.reset();
@@ -62,15 +63,20 @@ loginForms.addEventListener("submit", (event) => {
         .then((userCredentials) => {
             // Actions for a succesful login
             // A toast will confirm the login
-            console.log("Login user: ", userCredentials.user, "...");
+
+            const email = userCredentials.user.email;
+
+            document.getElementById("userEmail").innerHTML = email;
             const modal = document.getElementById("modal-login");
             M.Modal.getInstance(modal).close();
             signupForms.reset();
 
             // Toast
             M.toast({html:"User Signed-In"});
-
-        }).catch((error) => {
+            return(userCredentials.user.email)
+        })
+        // .then(email => console.log(email))
+        .catch((error) => {
             // Incase of failure display why
             console.log(error.code);
             console.log(error.message);
@@ -84,7 +90,7 @@ logoutButton.addEventListener("click", (event) =>{
     event.preventDefault();
     signOut(auth).then(() => {
         console.log("User Signed-Out");
-        
+        document.getElementById("userEmail").innerHTML = "Log-In";
         //User Sign-Out Toast 
         M.toast({html:"User Signed-Out"});
 

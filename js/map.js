@@ -9,7 +9,7 @@
  *      and the date item will be used toset the the time that the fire started. **/
 
 
-export function initMap() {
+ export function initMap() {
     // Starting map and setting the point of foucs. 
     // Point of focus will be set the geographical center of the united states
     let map = new google.maps.Map(document.getElementById("map"), {
