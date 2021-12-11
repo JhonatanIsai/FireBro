@@ -34,7 +34,6 @@ let dynamic_pages = [
     // "https://eonet.gsfc.nasa.gov/api/v3/categories/wildfires?status=open"
 
 ];
-
 // When we the install the files in asset will be cached
 self.addEventListener('install', event => {
     event.waitUntil(
